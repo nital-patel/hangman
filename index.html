@@ -1,97 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link type="text/css" rel="stylesheet" href="style.css">
-
-</style>
   <title>juastHangman.com</title>
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-
-  <h1>Hangman Game</h1>
-  <div id="hangman_play_area" class="hangman_play_area">
-  <table>
+<h1>Hangman Game</h1>
+<div id="hangman_play_area" class="hangman_play_area">
+  <div id="td1" class="td1">
+    <h2>Strikes</h2>
+    <table>
       <tr>
-        <td><div class ="boxes" id = "a1"></div></td>
-        <td><div class ="boxes" id = "a1"></div></td>
-        <td><div class ="boxes" id = "a1"></div></td>
+        <td><div ></div></td>
+        <td><div ></div></td>
+
       </tr>
     </table>
     <table>
       <tr>
-        <td><div class ="boxes" id = "a1"></div></td>
-        <td><div class ="boxes" id = "a1"></div></td>
-        <td><div class ="boxes" id = "a1"></div></td>
+
+        <td><div ></div></td>
+        <td><div ></div></td>
       </tr>
     </table>
+    <table>
+      <tr>
+        <td><div></div></td>
+        <td><div ></div></td>
 
+      </tr>
+    </table>
   </div>
-  <div id="right_colum" class="right_colum">
+</div>
+<div id="right_colum" class="right_colum">
   <div>
-  <a href="#"></a>
+    <a href="#"></a>
     <table>
       <tr>
-        <td><div class ="boxes" id = "a1">A</div></td>
-        <td><div class ="boxes" id = "a1">B</div></td>
-        <td><div class ="boxes" id = "a1">C</div></td>
-        <td><div class ="boxes" id = "a1">D</div></td>
+        <td><div class ="boxes">A</div></td>
+        <td><div class ="boxes">B</div></td>
+        <td><div class ="boxes">C</div></td>
+        <td><div class ="boxes">D</div></td>
+      </tr>
+
+      <tr>
+        <td><div class ="boxes">E</div></td>
+        <td><div class ="boxes">F</div></td>
+        <td><div class ="boxes">G</div></td>
+        <td><div class ="boxes">H</div></td>
+      </tr>
+
+      <tr>
+        <td><div class ="boxes">I</div></td>
+        <td><div class ="boxes">J</div></td>
+        <td><div class ="boxes">K</div></td>
+        <td><div class ="boxes">L</div></td>
+      </tr>
+
+      <tr>
+        <td><div class ="boxes">M</div></td>
+        <td><div class ="boxes">N</div></td>
+        <td><div class ="boxes">O</div></td>
+        <td><div class ="boxes">P</div></td>
+      </tr>
+
+      <tr>
+        <td><div class ="boxes">Q</div></td>
+        <td><div class ="boxes">R</div></td>
+        <td><div class ="boxes">S</div></td>
+        <td><div class ="boxes">T</div></td>
+      </tr>
+
+      <tr>
+        <td><div class ="boxes">U</div></td>
+        <td><div class ="boxes">V</div></td>
+        <td><div class ="boxes">W</div></td>
+        <td><div class ="boxes">X</div></td>
+      </tr>
+
+      <tr>
+        <td><div class ="boxes">Y</div></td>
+        <td><div class ="boxes">Z</div></td>
       </tr>
     </table>
-    <table>
-        <tr>
-          <td><div class ="boxes" id = "a1">E</div></td>
-          <td><div class ="boxes" id = "a1">F</div></td>
-          <td><div class ="boxes" id = "a1">G</div></td>
-          <td><div class ="boxes" id = "a1">H</div></td>
-          </tr>
-    </table>
+  </div>
+  <div id="td3" class="td3">
+    <h3>Target Word</h3>
     <table>
       <tr>
-        <td><div class ="boxes" id = "a1">I</div></td>
-        <td><div class ="boxes" id = "a1">J</div></td>
-        <td><div class ="boxes" id = "a1">K</div></td>
-        <td><div class ="boxes" id = "a1">L</div></td>
+        <td><div ></div></td>
+        <td><div ></div></td>
+        <td><div ></div></td>
+        <td><div ></div></td>
+        <td><div ></div></td>
+        <td><div ></div></td>
       </tr>
     </table>
-    <table>
-      <tr>
-        <td><div class ="boxes" id = "a1">M</div></td>
-        <td><div class ="boxes" id = "a1">N</div></td>
-        <td><div class ="boxes" id = "a1">O</div></td>
-        <td><div class ="boxes" id = "a1">P</div></td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <td><div class ="boxes" id = "a1">Q</div></td>
-        <td><div class ="boxes" id = "a1">R</div></td>
-        <td><div class ="boxes" id = "a1">S</div></td>
-        <td><div class ="boxes" id = "a1">T</div></td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <td><div class ="boxes" id = "a1">U</div></td>
-        <td><div class ="boxes" id = "a1">V</div></td>
-        <td><div class ="boxes" id = "a1">W</div></td>
-        <td><div class ="boxes" id = "a1">X</div></td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <td><div class ="boxes" id = "a1">Y</div></td>
-        <td><div class ="boxes" id = "a1">Z</div></td>
-      </tr>
-    </table>
-    </div>
-
-
-
-
-
-
-
-
-
+  </div>
+</div>
 </body>
 </html>
