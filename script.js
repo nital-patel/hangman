@@ -45,10 +45,11 @@ function findLetter(letter) {
         alert("Congratulations you won!!!");
     }
 
+    renderGuessedWord();
     console.log('Wrong Letters : ' + JSON.stringify(wrongLetters));
 }
 
-function reset() {
+function init() {
     var lettersTable = $("#letters");
     var counter = 0;
     var row;
@@ -71,6 +72,7 @@ function reset() {
         lettersTable.append(row);
     }
 
+    renderGuessedWord();
     console.log('Target Word : ' + targetWord);
     console.log('Guess Word : ' + guessedWord);
     console.log("Incorrect, Try Again!");
@@ -78,11 +80,16 @@ function reset() {
 }
 
 function renderGuessedWord() {
+    var guessWordBox  = $("#guessed-word-boxes");
+    guessWordBox.html("");
 
+    for (var i=0; i < guessedWord.length; i++ ){
+        guessWordBox.append($("<li class=\"guessed-letter\"><div class=\"box\">" + guessedWord.charAt(i) + "</div></li>"));
+    }
 }
 
 function renderStrikedLetters() {
-
+    
 
 }
 
@@ -91,7 +98,7 @@ function updatePage() {
 
 }
 
-reset();
+init();
 
 
 
