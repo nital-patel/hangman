@@ -1,3 +1,4 @@
+$(document).ready(function(){
 
 var targetWord;
 var guessedWord;
@@ -12,11 +13,14 @@ function getRandomWord() {
         'mouse',
         'heart'
     ];
-    targetWord = Math.floor(Math.random() * gameWordArray.length);
-    return gameWordArray[targetWord].toUpperCase();
-}
-function checkIfUserWon () {
 
+    var randNum;
+
+    randNum = Math.floor(Math.random() * gameWordArray.length);
+    return gameWordArray[randNum];
+}
+
+function checkIfUserWon () {
     return targetWord === guessedWord;
 }
 
@@ -24,6 +28,7 @@ function checkIfUserLost () {
     if (wrongLetters.length === 6) {
         return true;
     }
+
     return false;
 }
 
@@ -35,64 +40,40 @@ function findLetter(letter) {
             guessedWord = guessedWord.substr(0, i) + letter + guessedWord.substr(i + letter.length);
         }
     }
+
     if (!letterFound) {
         wrongLetters.push(letter);
     }
 
     console.log('Guessed Word' + guessedWord);
-
-    if (checkIfUserWon()) {
-        alert("Congratulations you won!!!");
-    }
-
+    console.log('User Won ? : ' + checkIfUserWon());
     console.log('Wrong Letters : ' + JSON.stringify(wrongLetters));
 }
 
 function reset() {
-    var lettersTable = $("#letters");
-    var counter = 0;
-    var row;
-    var box;
-
     targetWord = getRandomWord();
     guessedWord = "";
     wrongLetters = [];
+
     for (var i=0; i < targetWord.length; i++ ){
         guessedWord += "_";
     }
 
-    for (i=0; i<7; i++) {
-        row = $("<tr></tr>");
-        for (var j=0; j<4 && counter<26 ; j++, counter++) {
-            box = $("<td class='box'><div class =\"boxes\">" + String.fromCharCode(65 + counter)+ "</div></td>");
-            box.click(findLetter.bind(null, String.fromCharCode(65 +  counter)));
-           row.append(box);
-        }
-        lettersTable.append(row);
-    }
-
     console.log('Target Word : ' + targetWord);
     console.log('Guess Word : ' + guessedWord);
-    console.log("Incorrect, Try Again!");
-    console.log("Correct, try Again!");
-}
-
-function renderGuessedWord() {
 
 }
-
-function renderStrikedLetters() {
-
-
-}
-
 
 function updatePage() {
 
 }
 
-reset();
+function initialBindings() {
 
+}
+
+reset();
+});
 
 
 
