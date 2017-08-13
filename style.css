@@ -12,6 +12,15 @@ h1 {
   color: #00e6ac;
   font-family: sans-serif;
 }
+.reset {
+  padding: 5px;
+  width: 400px;
+  font-size: 1.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
 
 h2 {
   margin: 0;

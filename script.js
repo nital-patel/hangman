@@ -22,9 +22,13 @@ function checkIfUserWon () {
 
 function checkIfUserLost () {
     if (wrongLetters.length === 6) {
+        alert("Incorrect, Try Again!");
+        init();
         return true;
+
     }
     return false;
+
 }
 
 function findLetter(letter) {
@@ -37,15 +41,20 @@ function findLetter(letter) {
     }
     if (!letterFound) {
         wrongLetters.push(letter);
+
     }
 
     console.log('Guessed Word' + guessedWord);
 
-    if (checkIfUserWon()) {
-        alert("Congratulations you won!!!");
-    }
+
 
     renderGuessedWord();
+    renderStrikedLetters();
+    if (checkIfUserWon()) {
+        alert("Congratulations you won!!!");
+
+    }
+    checkIfUserLost();
     console.log('Wrong Letters : ' + JSON.stringify(wrongLetters));
 }
 
@@ -54,6 +63,7 @@ function init() {
     var counter = 0;
     var row;
     var box;
+    lettersTable.html("");
 
     targetWord = getRandomWord();
     guessedWord = "";
@@ -73,10 +83,10 @@ function init() {
     }
 
     renderGuessedWord();
+    renderStrikedLetters();
     console.log('Target Word : ' + targetWord);
     console.log('Guess Word : ' + guessedWord);
-    console.log("Incorrect, Try Again!");
-    console.log("Correct, try Again!");
+
 }
 
 function renderGuessedWord() {
@@ -89,7 +99,19 @@ function renderGuessedWord() {
 }
 
 function renderStrikedLetters() {
-    
+
+    var strikedLetters = $("#striked-box");
+    strikedLetters.html("");
+    var counter = 0;
+    for (var i=0; i< 3; i++){
+        row = $("<tr></tr>");
+        for (var j=0; j<2; j++){
+            box = $("<td class=\"box\"><div class=\"box\">" + (wrongLetters[counter++] || '') + "</div></td>");
+            row.append(box);
+        }
+        strikedLetters.append(row);
+
+    }
 
 }
 
