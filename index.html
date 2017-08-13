@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>juastHangman.com</title>
+  <title>Hangman Game</title>
   <link type="text/css" rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
 </head>
 <body>
-<h1>Hangman Game</h1>
-<div id="hangman_play_area" class="hangman_play_area">
-  <div id="td1" class="game-area">
-    <h2>Strikes</h2>
-    <table id="striked-box">
-
-    </table>
+  <h1>Hangman Game</h1>
+  <div id="hangman_play_area" class="hangman_play_area">
+    <div id="td1" class="game-area">
+      <h2>Strikes</h2>
+      <table id="striked-box"></table>
+    </div>
   </div>
-</div>
-<div id="right_colum" class="right_colum">
-  <table id="letters"></table>
-  <div class="guessed-word">
-    <h3>Target Word</h3>
-    <ul id="guessed-word-boxes"></ul>
-    
+  <div id="right_colum" class="right_colum">
+    <table id="letters"></table>
+    <div class="guessed-word">
+      <h3>Target Word</h3>
+      <ul id="guessed-word-boxes"></ul>
+    </div>
   </div>
-</div>
-<script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

@@ -3,13 +3,13 @@
 }
 
 body {
-  background: #1C2833;
+  background: lightgoldenrodyellow;
 }
 
 h1 {
   text-align: center;
   font-size: 50px;
-  color: #00e6ac;
+  color: #78ad75;
   font-family: sans-serif;
 }
 .reset {
@@ -25,18 +25,18 @@ h1 {
 h2 {
   margin: 0;
   font-size: 25px;
-  color: #FFF59D;
+  color: #78ad75;
 }
 
 h3 {
   text-align: center;
   font-size: 25px;
-  color: #FFF59D;
+  color: #78ad75;
 }
 
 .hangman_play_area {
   padding-top: 10px;
-  border: 3px solid #ffffff;
+  border: 3px solid black;
   width: 470px;
   height: 400px;
   position: absolute;
@@ -65,21 +65,22 @@ h3 {
   text-align: center;
   font-size: 25px;
   font-weight: bolder;
-  background: #AEB6BF;
+  background: #80aaff;
 }
 
 #letters {
-  border: 3px solid #ffffff;
+  border: 3px solid black;
   padding: 5px;
   border-radius: 13px;
 }
 
 .guessed-word {
-  border: 1px solid #bbbbbb;
+  border: 3px solid black;
   width: 280px;
   height: 150px;
   padding-bottom: 10px;
   margin: 120px 300px 0 0;
+  border-radius: 15px;
 }
 
 .guessed-word ul {
